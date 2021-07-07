@@ -1,0 +1,20 @@
+Entorpy : in a column find the counts of every category and then iterate over each category:
+	  Initial impurity is 1 and while iterating we will subract impurity from prob_of_label
+	  FORMULA :: 
+		     prob = counts[category] / (total_number_of_items_in_that_column)
+
+		     IMPURITY -= prob^2
+
+		return IMPUTRITY
+
+INFORMATION GAIN: 
+			MAIN NODE
+			  /\
+			 /  \
+		       LEFT RIGHT
+	FORMULA :: 
+	
+		prob_left = len(left) / (len(left) + len(right) ) 
+
+		return entropy(MAIN_NODE) - (prob_left * entropy(left) + (1-prob_left)*entropy(right))
+
